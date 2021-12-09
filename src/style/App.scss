@@ -40,12 +40,16 @@ $primary-white: #fff;
 }
 
 .img-banner {
+  box-shadow: 0 0 20px $primary-white;
   border-radius: 100%;
-  border-color: $primary-white;
-  border-width: 10px;
+  border: 2px solid $primary-white;
   width: 30%;
   height: 30%;
   object-fit: contain;
+}
+.moonTag {
+  width: 30%;
+  animation: spin 3s linear infinite;
 }
 
 
@@ -66,12 +70,24 @@ $primary-white: #fff;
   color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
+@keyframes spin {
+  0%{
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  20%{
+    transform: rotate(4deg);
+  }
+  40%{
+    transform: rotate(2deg);
+  }
+  60%{
+    transform: rotate(-2deg);
+  }
+  80%{
+    transform: rotate(-4deg);
+  }
+  100%{
+    transform: rotate(0deg);
   }
 }
 
@@ -79,9 +95,24 @@ $primary-white: #fff;
   .img-banner{
     width: 60%;
     // height: auto;
-
+  }
+  .moonTag{
+    width: 50%;
   }
   
+}
+
+
+@-webkit-keyframes spin {
+  0% {
+      -webkit-transform: rotate(0deg);
+  }
+  50% {
+      -webkit-transform: rotate(20deg);
+  }
+  100% {
+      -webkit-transform: rotate(-20deg);
+  }
 }
 
 @import "~bootstrap/scss/bootstrap";
