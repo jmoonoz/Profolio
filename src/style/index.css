@@ -1,0 +1,21 @@
+body {
+  background: linear-gradient(137deg,#630000,#eeebdd,#630000);
+  background-size: 180% 180%;
+  animation: gradient-animation 9s ease infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
